@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    font-family: "Anuphan","Open Sans", sans-serif;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding: 8px 24px;
+    height: 4.5em;
+    background-color: rgb(34, 37, 39);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Icon{
+    color: rgb(202, 231, 236);
+    font-size: 1em;
+    letter-spacing: 3px;
+}
+
+#cartSummary{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    padding: 16px;
+    border: 1px solid #1a2835de;
+    border-radius: 8px;
+    display: none;
+
+    table {
+        th {
+           font-weight: 600px;
+        }
+        th,td {
+            min-width: 100px;
+            text-align: center;
+        }
+    }
+}
+
+#productList{
+    display: grid;
+    max-width: 1240px;
+    margin: 5em auto;
+    padding: 0 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 2em;
+}
+
+.productThumbnail{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.productBottomSheet{
+    display: flex;
+    justify-content: space-between;
+}
+
+.productName{
+    margin-top: 1em;
+    display: block;
+}
+
+button{
+    background-color: rgb(35, 143, 245);
+    border-radius: 6px;
+    border: none;
+    color: white;
+    padding: 0.8em 1.8em;
+    font-size: 16px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(26, 243, 153);
+    }
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+    .clearButton{
+        background-color: rgb(230, 28, 28);
+        opacity: 0.8;
+        padding: 0.7em 1.7em ;
+    }
+}
+
+#wallpaperPage{
+    width: 100%;   
+    max-height: 700px; 
+    height: auto;      
+    object-fit: cover; 
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 750px) {
+    #wallpaperPage {
+      display: none;
+    }
+  }
