@@ -183,7 +183,7 @@ const showNotification = (message) => {
 // --- การชำระเงิน ---
 const checkout = () => {
   if (Object.keys(cart).length === 0) {
-    showNotification('ไม่มีสินค้าในตะกร้า กรุณาเลือกสินค้าก่อนชำระเงิน');
+    showNotification('กรุณาเลือกสินค้าก่อนชำระเงิน');
     return;
   }
   
