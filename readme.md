@@ -1,0 +1,1 @@
+A small e-commerce website built with plain HTML, CSS, and JavaScript. It allows users to add or remove products and view selected items in the shopping cart. Product data is fetched from a mock JSON API to practice DOM manipulation and event handling.
