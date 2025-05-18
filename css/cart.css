@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    font-family: "Anuphan","Open Sans", sans-serif;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding: 8px 24px;
+    height: 4.5em;
+    background-color: rgb(34, 37, 39);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.Icon{
+    color: rgb(202, 231, 236);
+    font-size: 1em;
+    letter-spacing: 3px;
+}
+
+.Icon h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: rgb(35, 143, 245);
+    border-radius: 6px;
+    border: none;
+    color: white;
+    padding: 0.8em 1.8em;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(26, 243, 153);
+}
+
+.backToShopBtn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.backToShopBtn:hover {
+    background-color: #e0e0e0;
+}
+
+/* --- หน้าตะกร้าสินค้า --- */
+.cartPage {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.cartTitle {
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: #333;
+    font-size: 1.8em;
+}
+
+/* --- ตารางสินค้า --- */
+.cartItems {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+}
+
+.cartItems th {
+    background-color: #f5f5f5;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+}
+
+.cartItems td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.cartItems img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* --- ส่วนควบคุมจำนวน --- */
+.quantityControl {
+    display: flex;
+    align-items: center;
+}
+
+.quantityControl button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.quantityControl button:hover {
+    background-color: rgb(35, 143, 245);
+    color: white;
+}
+
+.quantity {
+    margin: 0 10px;
+    width: 30px;
+    text-align: center;
+}
+
+.removeItem {
+    background-color: transparent;
+    color: #e63946;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.removeItem:hover {
+    background-color: transparent;
+    color: #c1121f;
+}
+
+/* --- สรุปตะกร้า --- */
+.cartSummarySection {
+    border-top: 2px solid #eee;
+    padding-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartTotal {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cartButtons {
+    display: flex;
+    gap: 1em;
+}
+
+/* --- ปุ่มดำเนินการ --- */
+.continueShoppingBtn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.continueShoppingBtn:hover {
+    background-color: #e0e0e0;
+}
+
+.clearButton {
+    background-color: rgb(230, 28, 28);
+    opacity: 0.8;
+    padding: 0.7em 1.7em;
+}
+
+.clearButton:hover {
+    opacity: 1;
+    background-color: rgb(204, 15, 15);
+}
+
+.checkoutBtn {
+    background-color: #38b000;
+}
+
+.checkoutBtn:hover {
+    background-color: #2d9400;
+}
+
+/* --- แจ้งเตือน --- */
+#notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #333;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 1rem;
+    min-width: 250px;
+    max-width: 80%;
+    border-left: 4px solid #238ff5;
+}
+
+/* --- ส่วนท้าย --- */
+footer {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 8px;
+    letter-spacing: 2px;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* --- รองรับมือถือ --- */
+@media (max-width: 1024px) {
+    .cartPage {
+        max-width: 90%;
+        margin: 1.5em auto;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 8px 16px;
+    }
+    
+    .Icon h1 {
+        font-size: 1.3rem;
+    }
+    
+    button {
+        padding: 0.7em 1.5em;
+        font-size: 14px;
+    }
+    
+    .cartTitle {
+        font-size: 1.5em;
+    }
+    
+    .cartItems th, .cartItems td {
+        padding: 10px 8px;
+    }
+    
+    .cartItems img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        height: auto;
+        padding: 12px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .Icon {
+        margin-bottom: 5px;
+    }
+    
+    .cartPage {
+        padding: 1em;
+        margin: 1em auto;
+    }
+    
+    .cartItems th:nth-child(1), 
+    .cartItems td:nth-child(1) {
+        display: none;
+    }
+    
+    .cartSummarySection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+    }
+    
+    .cartButtons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cartButtons button {
+        width: 100%;
+    }
+    
+    .cartTotal {
+        align-self: center;
+        margin-bottom: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .cartPage {
+        max-width: 95%;
+        padding: 0.8em;
+    }
+    
+    .cartTitle {
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+    
+    .cartItems {
+        font-size: 0.9em;
+    }
+    
+    .cartItems th:nth-child(3),
+    .cartItems td:nth-child(3) {
+        display: none;
+    }
+    
+    .cartItems th, .cartItems td {
+        padding: 8px 5px;
+    }
+    
+    .quantityControl button {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+    
+    .quantity {
+        margin: 0 5px;
+    }
+    
+    .Icon h1 {
+        font-size: 1.2rem;
+    }
+    
+    button.backToShopBtn {
+        font-size: 13px;
+        padding: 0.6em 1.2em;
+    }
+} 

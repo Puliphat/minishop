@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ตะกร้าสินค้า - MINI SHOP</title>
+    <!-- front -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/cart.css" />
+    <!-- js -->
+    <script src="../js/cart.js" defer></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="Icon">
+            <h1 class="fa-solid fa-store"><a href="index.html" style="text-decoration: none; color: inherit;"> MINI SHOP</a></h1>
+        </div>
+        <div>
+            <a href="index.html"><button class="backToShopBtn"><i class="fa-solid fa-arrow-left"></i> กลับไปซื้อสินค้า</button></a>
+        </div>
+    </nav>
+    
+    <main>
+        <!-- Cart Page -->
+        <div class="cartPage">
+            <h1 class="cartTitle">ตะกร้าสินค้า</h1>
+            <table class="cartItems">
+                <thead>
+                    <tr>
+                        <th>รูปภาพ</th>
+                        <th>สินค้า</th>
+                        <th>ราคา</th>
+                        <th>จำนวน</th>
+                        <th>รวม</th>
+                        <th>ลบ</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItemsList">
+                    <!-- cart items ไว้แสดงส่วนที่ js สร้าง -->
+                </tbody>
+            </table>
+            <div class="cartSummarySection">
+                <div class="cartTotal">
+                    ราคารวมทั้งหมด: <span id="cartTotalAmount">$0</span>
+                </div>
+                <div class="cartButtons">
+                    <a href="index.html"><button class="continueShoppingBtn">กลับไปเลือกซื้อ</button></a>
+                    <button id="clearCartBtn" class="clearButton">เคลียร์สินค้า</button>
+                    <button id="checkout" class="checkoutBtn">ชำระเงิน</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <h1>© 2025 Mini Shop, All rights reserved.</h1>
+    </footer>
+    
+    <!-- Notification element -->
+    <div id="notification" style="display: none;"></div>
+</body>
+
+</html> 
